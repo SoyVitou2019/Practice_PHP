@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+    <h2>Contact Us</h2>
+    <form method="post" action="server.php">
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" name="subject" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <!-- Using double hybrid Honeypot field -->
+        <!-- I build 3 traps for bot hahahaha -->
+        <div style="display:none;">
+            <label for="website1">Leave this field empty:</label><br>
+            <input type="text" id="website1" name="website1">
+        </div>
+
+        <div style="opacity: 0;">
+            <label for="website2">Leave this field empty:</label><br>
+            <input type="text" id="website2" name="website2">
+        </div>
+
+        <div style="position: absolute; left: -9999px;">
+            <label for="website3">Leave this field empty:</label><br>
+            <input type="text" id="website3" name="website3">
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
